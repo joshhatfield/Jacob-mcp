@@ -24,7 +24,7 @@ export CONFLUENCE_USERNAME="your_user"     # if basic
 export CONFLUENCE_VERIFY_TLS="true"        # false to skip TLS verify (dev only)
 export CONFLUENCE_TIMEOUT="30"
 
-
+export MCPO_API_KEY="secret123"
 # pip install mcpo 
-mcpo --port 8000 -- python main.py
+mcpo --port 8000 --api-key "$MCPO_API_KEY" -- python main.py
 ```
