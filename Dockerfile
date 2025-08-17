@@ -7,7 +7,7 @@ RUN pip install --no-cache-dir \
     requests>=2.31.0
 
 
-COPY src/* /app/
+COPY src/ /app/
 WORKDIR /app
 
 ENV MCPO_API_KEY=""
@@ -21,4 +21,4 @@ EXPOSE 8000
 
 # Start MCPO and run the MCP server over stdio
 # MCPO will serve OpenAPI at /docs and require the API key
-CMD mcpo --port 8000 --api-key "$MCPO_API_KEY" -- python /app/confluence_mcp_server.py
+CMD ls -la && mcpo --port 8000 --api-key "$MCPO_API_KEY" -- python main.py
