@@ -31,7 +31,7 @@ def jira_get_issue(key: str,
                    fields: Optional[List[str]] = None) -> Dict[str, Any]:
     """
     Get a single issue by key (e.g. 'PROJ-123').
-    - fields: list of field names to include
+    - fields: list of field names to include eg. "summary", "status"
     Returns: issue object (Jira REST v2)
     """
     client = jira_client_from_env()
