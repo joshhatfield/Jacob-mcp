@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# local testing compose file
+
+local-compose.yml
+
 # Crush
 
 .crush/

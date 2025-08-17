@@ -1,0 +1,26 @@
+version: "3.3"
+
+services:
+  jacob-mcp:
+    image: "jacob-mcp:latest"
+    container_name: jacob-mcp
+    ports:
+      - "8000:8000"
+    environment:
+      MCPO_API_KEY: "supersecret"
+
+      JIRA_BASE_URL: "https://jira.example.com"
+      JIRA_PAT: "your-jira-pat"
+      CONFLUENCE_BASE_URL: "https://confluence.example.com"
+      CONFLUENCE_PAT: "your-confluence-pat"
+
+
+      # Optional tweaks
+      JIRA_AUTH_MODE: "bearer"
+      CONFLUENCE_AUTH_MODE: "bearer"
+      # JIRA_USERNAME: ""
+      # CONFLUENCE_USERNAME: ""
+      JIRA_VERIFY_TLS: "true"
+      CONFLUENCE_VERIFY_TLS: "true"
+      JIRA_TIMEOUT: "30"
+      CONFLUENCE_TIMEOUT: "30"
