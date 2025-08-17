@@ -10,8 +10,6 @@ RUN pip install --no-cache-dir \
 COPY src/* /app/
 WORKDIR /app
 
-# MCPO auth: set at runtime; this is your "password"
-# Example: docker run -e MCPO_API_KEY=supersecret ...
 ENV MCPO_API_KEY=""
 
 ENV JIRA_BASE_URL=""
